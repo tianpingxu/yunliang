@@ -1,15 +1,15 @@
 ./objects_release/radio.o: ..\Bsp\radio\radio.c ..\Bsp\radio\radio.h \
   ..\Bsp\radio\typedefs.h ..\Driver\CMSIS\device\n32l40x.h \
   ..\Driver\CMSIS\core\core_cm4.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Driver\CMSIS\core\cmsis_version.h \
   ..\Driver\CMSIS\core\cmsis_compiler.h \
   ..\Driver\CMSIS\core\cmsis_armclang.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Driver\CMSIS\core\mpu_armv7.h \
   ..\Driver\CMSIS\device\system_n32l40x.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Driver\CMSIS\device\n32l40x_conf.h \
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_adc.h \
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_can.h \
@@ -37,8 +37,8 @@
   ..\Bsp\radio\cmt2300_defs.h ..\Bsp\radio\cmt2300_hal.h \
   ..\Bsp\radio\cmt_spi3.h ..\Bsp\radio\delay.h \
   ..\Bsp\radio\cmt2300_params.h ..\Bsp\inc\sys_type.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\Bsp\motor\motor.h ..\Bsp\oled\oled_show.h ..\Bsp\radio\delay.h \
   ..\Bsp\api\api.h ..\Bsp\485\protocol.h ..\Bsp\485\485.h \
   ..\Bsp\485\protocol.h

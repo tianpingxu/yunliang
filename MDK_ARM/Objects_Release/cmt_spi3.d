@@ -1,15 +1,15 @@
 ./objects_release/cmt_spi3.o: ..\Bsp\radio\cmt_spi3.c \
   ..\Bsp\radio\cmt_spi3.h ..\Driver\CMSIS\device\n32l40x.h \
   ..\Driver\CMSIS\core\core_cm4.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Driver\CMSIS\core\cmsis_version.h \
   ..\Driver\CMSIS\core\cmsis_compiler.h \
   ..\Driver\CMSIS\core\cmsis_armclang.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Driver\CMSIS\core\mpu_armv7.h \
   ..\Driver\CMSIS\device\system_n32l40x.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Driver\CMSIS\device\n32l40x_conf.h \
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_adc.h \
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_can.h \
@@ -35,7 +35,7 @@
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_lcd.h \
   ..\Driver\n32l40x_std_periph_driver\inc\misc.h ..\Bsp\radio\typedefs.h \
   ..\Bsp\radio\delay.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Bsp\inc\sys_type.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\Bsp\inc\bsp_timer.h ..\Bsp\inc\sys_type.h

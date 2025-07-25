@@ -15,7 +15,7 @@ extern uint8_t beep_flag;
 extern uint8_t Speed_up_flag;
 
 uint8_t heart_frame[7] = {0xAA, 0x55, STANDBY_RESPONSE_POLL, CW_DEV, LOCAL_DEV};
-/*change */
+
 void rx_data_hadle(uint8_t* buf, uint16_t len) {
     // 帧头校验
     if((buf[0] != HEADER_1) || (buf[1] != HEADER_2))
@@ -31,17 +31,27 @@ void rx_data_hadle(uint8_t* buf, uint16_t len) {
         switch (buf[2]) {
             // 查询心跳
             case HEART_BEAT:
+                communication_err_flag = 0;
+                CLEAR_BIT(DEV_ERR_STATE, 3);
                 heart_frame[5] = DEV_ERR_STATE;
                 heart_frame[6] = xy_frame_calc_xor(heart_frame, 6);
                 RS485_SendStr_length(heart_frame, 7);
                 break;
             // 起钉
             case NAIL_UP:
+                communication_err_flag = 0;
+                CLEAR_BIT(DEV_ERR_STATE, 3);
+                remote_chat_timeout_flag = 0;
+                CLEAR_BIT(DEV_ERR_STATE, 7);
                 motor_set_dir(MOTOR_LOCATION_LEFT);
                 cw_to_local_frame(NAIL_UP_INFO, DEV_ERR_STATE);
                 break;
             // 落钉
             case NAIL_DOWN:
+                communication_err_flag = 0;
+                CLEAR_BIT(DEV_ERR_STATE, 3);
+                remote_chat_timeout_flag = 0;
+                CLEAR_BIT(DEV_ERR_STATE, 7);
                 motor_set_dir(MOTOR_LOCATION_RIGHT);
                 cw_to_local_frame(NAIL_DOWN_INFO, DEV_ERR_STATE);
                 break;

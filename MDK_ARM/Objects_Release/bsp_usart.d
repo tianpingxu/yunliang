@@ -1,14 +1,14 @@
 ./objects_release/bsp_usart.o: ..\Bsp\src\bsp_usart.c \
   ..\Driver\CMSIS\device\n32l40x.h ..\Driver\CMSIS\core\core_cm4.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Driver\CMSIS\core\cmsis_version.h \
   ..\Driver\CMSIS\core\cmsis_compiler.h \
   ..\Driver\CMSIS\core\cmsis_armclang.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Driver\CMSIS\core\mpu_armv7.h \
   ..\Driver\CMSIS\device\system_n32l40x.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Driver\CMSIS\device\n32l40x_conf.h \
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_adc.h \
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_can.h \
@@ -33,8 +33,8 @@
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_wwdg.h \
   ..\Driver\n32l40x_std_periph_driver\inc\n32l40x_lcd.h \
   ..\Driver\n32l40x_std_periph_driver\inc\misc.h ..\Bsp\inc\sys_type.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  D:\local\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  D:\AppInstall\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\Bsp\inc\bsp_usart.h ..\Bsp\inc\bsp_io.h ..\Bsp\inc\bsp_wdg.h \
   ..\Bsp\inc\bsp_timer.h ..\Bsp\inc\sys_type.h ..\Bsp\485\protocol.h \
   ..\Bsp\485\485.h ..\Bsp\radio\delay.h ..\Bsp\485\protocol.h \

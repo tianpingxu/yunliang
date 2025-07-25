@@ -95,6 +95,8 @@ void motor_set_dir(uint8_t dir) {
 uint8_t motor_pwm = 0;
 uint16_t cnt_10us_1 = 0;
 uint16_t cnt_10us_2 = 0;
+uint16_t cnt_10us_3 = 0, cnt_1ms = 0;
+uint16_t cnt_10us_4 = 0, cnt_2ms = 0;
 uint16_t cnt_1ms_over_2 = 0;
 void TIM3_IRQHandler(void)
 {
@@ -158,6 +160,32 @@ void TIM3_IRQHandler(void)
                     next_rotate_dir_flag = 0;
                     motor_set_dir(next_rotate_dir);
                     next_rotate_dir = 0;
+                }
+            }
+        }
+
+        if(!jy_chat_timeout_flag) {
+            cnt_10us_3++;
+            if(cnt_10us_3 >= 100) {
+                cnt_10us_3 = 0;
+                cnt_1ms++;
+                if(cnt_1ms >= 120) {
+                    cnt_1ms = 0;
+                    jy_chat_timeout_flag = 1;
+                    SET_BIT(DEV_ERR_STATE, 2);
+                }
+            }
+        }
+
+        if(!remote_chat_timeout_flag) {
+            cnt_10us_4++;
+            if(cnt_10us_4 >= 100) {
+                cnt_10us_4 = 0;
+                cnt_2ms++;
+                if(cnt_2ms >= 120) {
+                    cnt_2ms = 0;
+                    remote_chat_timeout_flag = 1;
+                    SET_BIT(DEV_ERR_STATE, 7);
                 }
             }
         }
