@@ -15,7 +15,7 @@ extern uint8_t beep_flag;
 extern uint8_t Speed_up_flag;
 
 uint8_t heart_frame[7] = {0xAA, 0x55, STANDBY_RESPONSE_POLL, CW_DEV, LOCAL_DEV};
-
+/*change */
 void rx_data_hadle(uint8_t* buf, uint16_t len) {
     // 帧头校验
     if((buf[0] != HEADER_1) || (buf[1] != HEADER_2))
