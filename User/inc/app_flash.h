@@ -1,0 +1,20 @@
+#ifndef APP_FLASH_H
+#define APP_FLASH_H
+
+#define ADDR_START							(0x801F800)
+#define ADDR_REFIR_TYPE_SELECT				(ADDR_START + 0)
+#define ADDR_PREUUSER_UNIT_SELECT			(ADDR_START + 1)
+#define ADDR_TEMP_UNIT_SELECT				(ADDR_START + 2)
+#define ADDR_SHUTDONW_TIME_SELECT			(ADDR_START + 3)
+#define ADDR_LOWPOWER_TIME_SELECT			(ADDR_START + 4)
+#define ADDR_HIGHT_PRESSURE_PARAM			(ADDR_START + 5)
+#define ADDR_LOW_PRESSURE_PARAM				(ADDR_START + 17)
+#define ADDR_PARAM_ININT_FLAG				(ADDR_START + 30)
+
+
+
+void vw25q64WriteData(ULONG addr,UCHAR* indata,UCHAR len);
+UCHAR ucFlashWriteData(ULONG addr,UCHAR* indata,UCHAR len);
+
+#endif
+

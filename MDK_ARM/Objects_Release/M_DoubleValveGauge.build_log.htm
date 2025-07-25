@@ -1,0 +1,503 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.42.0.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: safce dxasc, faswcf, LIC=BUURY-IGW84-KP6ZY-ITE6A-64JU0-5ESN3
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.42.0.0
+Toolchain Path:  D:\Local\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.23
+Assembler:       Armasm.exe V6.23
+Linker/Locator:  ArmLink.exe V6.23
+Library Manager: ArmAr.exe V6.23
+Hex Converter:   FromElf.exe V6.23
+CPU DLL:         SARMCM3.DLL V5.42.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      Segger\JL2CM3.dll V2.99.45.0
+Dialog DLL:      TCM.DLL V1.56.6.0
+ 
+<h2>Project:</h2>
+D:\xu work\soft project\yunliang\MDK_ARM\M_DoubleValveGauge.uvprojx
+Project File Date:  04/29/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.23', folder: 'D:\Local\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'RELEASE'
+Note: source file '..\Bsp\485\485.c' - object file renamed from '.\Objects_Release\485.o' to '.\Objects_Release\485_1.o'.
+assembling startup_n32l40x.s...
+compiling system_n32l40x.c...
+compiling misc.c...
+compiling n32l40x_crc.c...
+compiling n32l40x_adc.c...
+compiling n32l40x_comp.c...
+compiling n32l40x_can.c...
+compiling n32l40x_dac.c...
+compiling n32l40x_dbg.c...
+compiling n32l40x_dma.c...
+compiling n32l40x_exti.c...
+compiling n32l40x_iwdg.c...
+compiling n32l40x_i2c.c...
+compiling n32l40x_gpio.c...
+compiling n32l40x_lpuart.c...
+compiling n32l40x_lcd.c...
+compiling n32l40x_flash.c...
+compiling n32l40x_lptim.c...
+compiling n32l40x_opamp.c...
+compiling n32l40x_pwr.c...
+compiling n32l40x_rcc.c...
+compiling n32l40x_wwdg.c...
+compiling n32l40x_spi.c...
+compiling n32l40x_usart.c...
+compiling main.c...
+compiling bsp_io.c...
+compiling n32l40x_rtc.c...
+compiling n32l40x_tim.c...
+compiling bsp_wdg.c...
+compiling bsp_timer.c...
+compiling bsp_adc.c...
+compiling bsp_spi.c...
+compiling bsp_interrupt.c...
+../Bsp/src/bsp_usart.c(226): warning: while loop has empty body [-Wempty-body]
+  226 |         while (RESET == USART_GetFlagStatus(USARTx, USART_FLAG_TXC));   /* Wait Tx data register empty */
+      |                                                                     ^
+../Bsp/src/bsp_usart.c(226): note: put the semicolon on a separate line to silence this warning
+../Bsp/src/bsp_usart.c(794): warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  794 |         printf(format);
+      |                ^~~~~~
+../Bsp/src/bsp_usart.c(794): note: treat the string as an argument to avoid this
+  794 |         printf(format);
+      |                ^
+      |                "%s", 
+2 warnings generated.
+compiling bsp_usart.c...
+compiling api.c...
+compiling 485.c...
+compiling protocol.c...
+compiling oled_spi.c...
+../Bsp/oled/oled_show.c(35): warning: passing 'char[1]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   35 |             OLED_ZFC(16, 3, OLED_zfc, Font_Size_F8x16);
+      |                             ^~~~~~~~
+../Bsp/oled\oled.h(42): note: passing argument to parameter 'str' here
+   42 | void OLED_ZFC(uint8_t x, uint8_t y, uint8_t *str, uint8_t Font_Size);
+      |                                              ^
+../Bsp/oled/oled_show.c(37): warning: passing 'char[1]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   37 |             OLED_ZFC(8, 3, OLED_zfc, Font_Size_F8x16);
+      |                            ^~~~~~~~
+../Bsp/oled\oled.h(42): note: passing argument to parameter 'str' here
+   42 | void OLED_ZFC(uint8_t x, uint8_t y, uint8_t *str, uint8_t Font_Size);
+      |                                              ^
+../Bsp/oled/oled_show.c(44): warning: passing 'char[1]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   44 |         OLED_ZFC(32, 3, OLED_zfc, Font_Size_F8x16);
+      |                         ^~~~~~~~
+../Bsp/oled\oled.h(42): note: passing argument to parameter 'str' here
+   42 | void OLED_ZFC(uint8_t x, uint8_t y, uint8_t *str, uint8_t Font_Size);
+      |                                              ^
+../Bsp/oled/oled_show.c(73): warning: format specifies type 'char *' but the argument has type 'uint8_t' (aka 'unsigned char') [-Wformat]
+   73 |             sprintf(OLED_zfc, "%s", dev_s.dev_err_code_now);
+      |                                ~~   ^~~~~~~~~~~~~~~~~~~~~~
+      |                                %hhu
+../Bsp/oled/oled_show.c(74): warning: passing 'char[1]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   74 |             OLED_ZFC(40, 6, OLED_zfc, Font_Size_F8x16);
+      |                             ^~~~~~~~
+../Bsp/oled\oled.h(42): note: passing argument to parameter 'str' here
+   42 | void OLED_ZFC(uint8_t x, uint8_t y, uint8_t *str, uint8_t Font_Size);
+      |                                              ^
+../Bsp/oled/oled_show.c(33): warning: 'sprintf' will always overflow; destination buffer has size 1, but format string expands to at least 2 [-Wformat-overflow]
+   33 |         sprintf(OLED_zfc, "%d", data_h);
+      |         ^
+../Bsp/oled/oled_show.c(43): warning: 'sprintf' will always overflow; destination buffer has size 1, but format string expands to at least 2 [-Wformat-overflow]
+   43 |         sprintf(OLED_zfc, "%d", data_l);
+      |         ^
+7 warnings generated.
+compiling oled_show.c...
+compiling rf.c...
+compiling radio.c...
+compiling cmt2300_hal.c...
+compiling cmt2300.c...
+../Bsp/radio/cmt_spi3.c(14): warning: incompatible pointer types passing 'GPIO_InitType *' to parameter of type 'GPIO_Module *' [-Wincompatible-pointer-types]
+   14 |     GPIO_InitPeripheral(gpio, &GPIO_InitStructure);
+      |                         ^~~~
+../Driver/n32l40x_std_periph_driver/inc\n32l40x_gpio.h(642): note: passing argument to parameter 'GPIOx' here
+  642 | void GPIO_InitPeripheral(GPIO_Module* GPIOx, GPIO_InitType* GPIO_InitStruct);
+      |                                       ^
+../Bsp/radio/cmt_spi3.c(34): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+   34 |     cmt_spi3_csb_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(20): note: expanded from macro 'cmt_spi3_csb_out'
+   20 | #define cmt_spi3_csb_out()      GPIO_Pin_Setting(CMT_CSB_GPIO, CMT_CSB_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(8): note: expanded from macro 'CMT_CSB_GPIO'
+    8 | #define CMT_CSB_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(38): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+   38 |     cmt_spi3_scl_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(22): note: expanded from macro 'cmt_spi3_scl_out'
+   22 | #define cmt_spi3_scl_out()      GPIO_Pin_Setting(CMT_SCL_GPIO, CMT_SCL_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(14): note: expanded from macro 'CMT_SCL_GPIO'
+   14 | #define CMT_SCL_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(42): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+   42 |     cmt_spi3_sda_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(23): note: expanded from macro 'cmt_spi3_sda_out'
+   23 | #define cmt_spi3_sda_out()      GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(46): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+   46 |     cmt_spi3_fcsb_out();
+      |     ^~~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(21): note: expanded from macro 'cmt_spi3_fcsb_out'
+   21 | #define cmt_spi3_fcsb_out()     GPIO_Pin_Setting(CMT_FCSB_GPIO, CMT_FCSB_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(11): note: expanded from macro 'CMT_FCSB_GPIO'
+   11 | #define CMT_FCSB_GPIO           GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(101): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  101 |     cmt_spi3_sda_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(23): note: expanded from macro 'cmt_spi3_sda_out'
+   23 | #define cmt_spi3_sda_out()      GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(104): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  104 |     cmt_spi3_scl_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(22): note: expanded from macro 'cmt_spi3_scl_out'
+   22 | #define cmt_spi3_scl_out()      GPIO_Pin_Setting(CMT_SCL_GPIO, CMT_SCL_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(14): note: expanded from macro 'CMT_SCL_GPIO'
+   14 | #define CMT_SCL_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(108): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  108 |     cmt_spi3_fcsb_out();
+      |     ^~~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(21): note: expanded from macro 'cmt_spi3_fcsb_out'
+   21 | #define cmt_spi3_fcsb_out()     GPIO_Pin_Setting(CMT_FCSB_GPIO, CMT_FCSB_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(11): note: expanded from macro 'CMT_FCSB_GPIO'
+   11 | #define CMT_FCSB_GPIO           GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(130): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  130 |     cmt_spi3_sda_in();
+      |     ^~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(24): note: expanded from macro 'cmt_spi3_sda_in'
+   24 | #define cmt_spi3_sda_in()       GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Input)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(137): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  137 |     cmt_spi3_sda_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(23): note: expanded from macro 'cmt_spi3_sda_out'
+   23 | #define cmt_spi3_sda_out()      GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(140): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  140 |     cmt_spi3_scl_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(22): note: expanded from macro 'cmt_spi3_scl_out'
+   22 | #define cmt_spi3_scl_out()      GPIO_Pin_Setting(CMT_SCL_GPIO, CMT_SCL_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(14): note: expanded from macro 'CMT_SCL_GPIO'
+   14 | #define CMT_SCL_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(144): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  144 |     cmt_spi3_fcsb_out();
+      |     ^~~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(21): note: expanded from macro 'cmt_spi3_fcsb_out'
+   21 | #define cmt_spi3_fcsb_out()     GPIO_Pin_Setting(CMT_FCSB_GPIO, CMT_FCSB_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(11): note: expanded from macro 'CMT_FCSB_GPIO'
+   11 | #define CMT_FCSB_GPIO           GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(157): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  157 |     cmt_spi3_sda_in();
+      |     ^~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(24): note: expanded from macro 'cmt_spi3_sda_in'
+   24 | #define cmt_spi3_sda_in()       GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Input)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(169): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  169 |     cmt_spi3_sda_in();
+      |     ^~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(24): note: expanded from macro 'cmt_spi3_sda_in'
+   24 | #define cmt_spi3_sda_in()       GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Input)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(178): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  178 |     cmt_spi3_fcsb_out();
+      |     ^~~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(21): note: expanded from macro 'cmt_spi3_fcsb_out'
+   21 | #define cmt_spi3_fcsb_out()     GPIO_Pin_Setting(CMT_FCSB_GPIO, CMT_FCSB_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(11): note: expanded from macro 'CMT_FCSB_GPIO'
+   11 | #define CMT_FCSB_GPIO           GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(182): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  182 |     cmt_spi3_csb_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(20): note: expanded from macro 'cmt_spi3_csb_out'
+   20 | #define cmt_spi3_csb_out()      GPIO_Pin_Setting(CMT_CSB_GPIO, CMT_CSB_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(8): note: expanded from macro 'CMT_CSB_GPIO'
+    8 | #define CMT_CSB_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(186): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  186 |     cmt_spi3_scl_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(22): note: expanded from macro 'cmt_spi3_scl_out'
+   22 | #define cmt_spi3_scl_out()      GPIO_Pin_Setting(CMT_SCL_GPIO, CMT_SCL_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(14): note: expanded from macro 'CMT_SCL_GPIO'
+   14 | #define CMT_SCL_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(189): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  189 |     cmt_spi3_sda_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(23): note: expanded from macro 'cmt_spi3_sda_out'
+   23 | #define cmt_spi3_sda_out()      GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(219): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  219 |     cmt_spi3_sda_in();
+      |     ^~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(24): note: expanded from macro 'cmt_spi3_sda_in'
+   24 | #define cmt_spi3_sda_in()       GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Input)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(229): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  229 |     cmt_spi3_fcsb_out();
+      |     ^~~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(21): note: expanded from macro 'cmt_spi3_fcsb_out'
+   21 | #define cmt_spi3_fcsb_out()     GPIO_Pin_Setting(CMT_FCSB_GPIO, CMT_FCSB_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(11): note: expanded from macro 'CMT_FCSB_GPIO'
+   11 | #define CMT_FCSB_GPIO           GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(233): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  233 |     cmt_spi3_csb_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(20): note: expanded from macro 'cmt_spi3_csb_out'
+   20 | #define cmt_spi3_csb_out()      GPIO_Pin_Setting(CMT_CSB_GPIO, CMT_CSB_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(8): note: expanded from macro 'CMT_CSB_GPIO'
+    8 | #define CMT_CSB_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(237): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  237 |     cmt_spi3_scl_out();
+      |     ^~~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(22): note: expanded from macro 'cmt_spi3_scl_out'
+   22 | #define cmt_spi3_scl_out()      GPIO_Pin_Setting(CMT_SCL_GPIO, CMT_SCL_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Out_PP)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(14): note: expanded from macro 'CMT_SCL_GPIO'
+   14 | #define CMT_SCL_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(240): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  240 |     cmt_spi3_sda_in();
+      |     ^~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(24): note: expanded from macro 'cmt_spi3_sda_in'
+   24 | #define cmt_spi3_sda_in()       GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Input)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+../Bsp/radio/cmt_spi3.c(270): warning: incompatible pointer types passing 'GPIO_Module *' to parameter of type 'GPIO_InitType *' [-Wincompatible-pointer-types]
+  270 |     cmt_spi3_sda_in();
+      |     ^~~~~~~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(24): note: expanded from macro 'cmt_spi3_sda_in'
+   24 | #define cmt_spi3_sda_in()       GPIO_Pin_Setting(CMT_SDA_GPIO, CMT_SDA_GPIO_PIN, GPIO_Slew_Rate_High, GPIO_Mode_Input)
+      |                                                  ^~~~~~~~~~~~
+../Bsp/radio\cmt_spi3.h(17): note: expanded from macro 'CMT_SDA_GPIO'
+   17 | #define CMT_SDA_GPIO            GPIOB
+      |                                 ^~~~~
+../Driver/CMSIS/device\n32l40x.h(1030): note: expanded from macro 'GPIOB'
+ 1030 | #define GPIOB       ((GPIO_Module*)GPIOB_BASE)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Bsp/radio/cmt_spi3.c(7): note: passing argument to parameter 'gpio' here
+    7 | void GPIO_Pin_Setting(GPIO_InitType *gpio, uint16_t nPin, GPIO_SpeedType speed, GPIO_ModeType mode)
+      |                                      ^
+24 warnings generated.
+compiling cmt_spi3.c...
+compiling oled.c...
+compiling delay.c...
+compiling function.c...
+../Bsp/motor/motor.c(1): warning: extra tokens at end of #include directive [-Wextra-tokens]
+    1 | #include "motor.h"ss
+      |                   ^
+      |                   //
+1 warning generated.
+compiling motor.c...
+linking...
+Program Size: Code=17120 RO-data=2572 RW-data=2520 ZI-data=8176  
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin --output=.\bin\M_DoubleValveGauge.bin .\Objects_Release\M_DoubleValveGauge.axf
+".\Objects_Release\M_DoubleValveGauge.axf" - 0 Error(s), 34 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Nationstech
+                http://www.keil.com/pack/Nationstech.N32L40x_DFP.1.0.1.pack
+                Nationstech::N32L40x_DFP@1.0.1
+                Nationstech N32L40x Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:/Local/Arm/Packs/Nationstech/N32L40x_DFP/1.0.1/firmware/CMSIS/device
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

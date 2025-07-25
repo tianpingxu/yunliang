@@ -1,0 +1,30 @@
+{
+    "files.associations": {
+        "oled_spi.h": "c",
+        "oled.h": "c",
+        "cmt2300_hal.h": "c",
+        "cmt_spi3.h": "c",
+        "gpio_defs.h": "c",
+        "cmt2300.h": "c",
+        "function.h": "c",
+        "delay.h": "c",
+        "cmt2300_params.h": "c",
+        "radio.h": "c",
+        "n32l40x.h": "c",
+        "bsp_usart.h": "c",
+        "n32l40x_rcc.h": "c",
+        "sys_type.h": "c",
+        "bsp_io.h": "c",
+        "bsp_timer.h": "c",
+        "typedefs.h": "c",
+        "rf.h": "c",
+        "485.h": "c",
+        "oled_show.h": "c",
+        "oled_library.h": "c",
+        "chinese_characters.h": "c",
+        "bsp_rtc.h": "c",
+        "motor.h": "c",
+        "protocol.h": "c",
+        "bmp.h": "c"
+    }
+}
